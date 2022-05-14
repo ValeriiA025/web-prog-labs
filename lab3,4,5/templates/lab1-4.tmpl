@@ -1,0 +1,25 @@
+{% extends 'base.tmpl' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{cond}}</h1>
+    <h2>Перше число: {{n1}}</h2>
+    <h4>Результат: {{res}}</h4>
+	<ol> {{cond1}}
+        <li>Перше число: {{n11}}</li>
+        <li>Друге число: {{n12}}</li>
+        <li>Трете число: {{n13}}</li>
+        <li>Result: {%if (n11==n12)%} {{n13}} {%elseif (n12 == n13)%} {{n11}} {%elseif (n11 == n13)%} {{n12}} {%endif%}</li>
+    </ol>
+</body>
+</html>
+
+{% endblock content %}
